@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GTA V Download</title>
+
+<link rel="icon" type="image/x-icon" href="assets/img/logo 3.png"/>
+
+
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<style>
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+    url("assets/img/gta1.webp"); /* 🔴 image yahan same folder me ho */
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+/* Comment Slide Overlay */
+#commentSlide {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+#commentSlide iframe {
+  width: 90%;
+  height: 90%;
+  border: none;
+  border-radius: 10px;
+}
+
+.comment-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Logo Header - FIXED se ABSOLUTE kar diya gaya hai */
+.site-logo-header {
+  position: absolute; 
+  top: 10px;
+  left: 20px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo-header img {
+  height: 120px;
+  width: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.site-logo-header .site-title {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size:   40px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.site-logo-header .site-title .tagline {
+  font-size: 12px;
+  color: #00ff00;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-logo-header">
+  <img src="assets/img/logo.png" alt="GameZone Logo">
+  <div class="site-title">
+    GameZone
+    <div class="tagline">GTA V Free Download</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="box">
+    <h1> GTA V </h1>
+    <p>
+      GTA 5 is a game client designed for easy installation 
+    </p>
+
+    <a href="GTA V 5.zip" download class="gta-btn download">⬇ Download GTA 5</a><br><br>
+
+    <a href="ReadMe.txt" download class="gta-btn download">
+      Read Me
+    </a><br><br>
+
+    <a class="comment-btn" id="commentBtn">💬 Comment</a>
+
+    <div class="count">Downloaded: 3,532,013 times</div>
+  </div>
+
+ <div class="game-desc-toggle" onclick="toggleDescription()">
+    <span>Game description</span>
+    <span class="chevron">⬇</span>
+  </div>
+
+</section>
+
+<section class="description" id="description">
+
+  <div class="sys-box">
+    <div class="gallery" id="gallery"></div>
+
+    <div class="dots">
+        <span class="dot active" onclick="showSet(0)"></span>
+        <span class="dot" onclick="showSet(1)"></span>
+    </div>
+<script>
+const imageSets = [
+    [
+        "assets/img/gta1.webp",
+        "assets/img/gta2.webp",
+        "assets/img/gta3.webp",
+        "assets/img/gta4.webp",
+        "assets/img/gta5.webp"
+    ],
+    [
+        "assets/img/gta6.webp",
+        "assets/img/gta7.webp",
+        "assets/img/gta8.webp",
+        "assets/img/gta9.webp",
+        "assets/img/gta10.webp"
+    ]
+];
+
+const gallery = document.getElementById("gallery");
+const dots = document.querySelectorAll(".dot");
+
+function showSet(index){
+    gallery.innerHTML = "";
+
+    imageSets[index].forEach(src=>{
+        const img = document.createElement("img");
+        img.src = src;
+        img.loading = "eager";   // 🔥 blur delay remove
+        gallery.appendChild(img);
+    });
+
+    dots.forEach(d=>d.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+showSet(0);
+
+</script>
+    <h2>🛠️ System Requirements (Minimum)</h2>
+    <ul>
+      <li><span>Operating System:</span> Windows 10 / 11 (64-bit)</li>
+      <li><span>Processor:</span> Intel Core i3 or AMD Ryzen 3 (Dual-core 2.0 GHz).</li>
+      <li><span>Memory:</span>4 GB (Minimum).</li>
+      <li><span>Graphics:</span> NVIDIA GeForce 9800 GT (1GB VRAM) Or AMD Radeon HD 4870 (1GB VRAM) </li>
+      <li><span>Storage:</span> 105 GB free space (SSD recommended)</li>
+    </ul>
+  </div>
+
+  <div class="about-game-box" id="aboutGame">
+    <h2>About this game</h2>
+
+    <p><b>Massive Open World:</b> Explore Los Santos, Mount Chiliad, deserts,
+    highways and the surrounding ocean.</p>
+
+    <p><b>Three Playable Protagonists:</b> Switch between Michael,
+    Franklin and Trevor with unique abilities.</p>
+
+    <p><b>Enhanced Graphics & Performance:</b> 4K visuals, high FPS
+    and detailed textures on PC.</p>
+    <p><b>Los Santos & Blaine County:</b> Explore a massive, highly detailed open world inspired by Southern California, including cities, mountains, and oceans.</p>
+    <p><b>Full Story Mode:</b> Play 70+ missions, heists and side quests.</p>
+  </div>
+
+<div class="download-box"> 
+  <h2>How to Download and Install the Game</h2>
+
+  <ol>
+    <li>Download all GTA V ZIP files from the website.</li>
+    <li>Once the downloads are complete, create a folder named <b>"GTA 5"</b> and move all ZIP files into it.</li>
+    <li>Right-click each ZIP file and select <b>"Extract Here"</b> (using WinRAR or 7-Zip).</li>
+    <li>When prompted, enter the extraction password (provided in the <b>ReadMe.txt</b> file).</li>
+    <li>After extraction, open <b>Game.exe</b> to start the game.</li>
+    <li>Follow any additional steps in the ReadMe file to complete the setup.</li>
+    <li>Enjoy the game!</li>
+  </ol>
+</div>
+
+
+
+<div class="container">
+  <h2>PC Requirements – Download & Installation Guide</h2>
+
+  <div class="note">
+    <strong>Important:</strong> All software given below is FREE and downloaded from OFFICIAL sources.
+  </div>
+
+  <!-- VISUAL C++ -->
+  <h3>1️⃣ Microsoft Visual C++ – Download & Install</h3>
+  <p><strong>What is it?</strong> A required system library to run the game.</p>
+
+  <p><strong>Download Source:</strong></p>
+  <ul>
+    <li>Official Microsoft Website</li>
+    <li>
+      Link:
+      <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank">
+        https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+      </a>
+    </li>
+  </ul>
+
+  <p><strong>How to Install:</strong></p>
+  <ul>
+    <li>According to your Windows, download both <strong>x64</strong> and <strong>x86</strong></li>
+    <li>Double-click on the downloaded file</li>
+    <li>Install → Finish</li>
+    <li>Restart your PC</li>
+  </ul>
+
+  <!-- DIRECTX -->
+  <h3>2️⃣ DirectX – Download & Install</h3>
+  <p><strong>What is it?</strong> An essential component for graphics and sound.</p>
+
+  <p><strong>Download Source:</strong></p>
+  <ul>
+    <li>Official Microsoft DirectX End-User Runtime</li>
+    <li>
+      Link:
+      <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" target="_blank">
+        https://www.microsoft.com/download/details.aspx?id=35
+      </a>
+    </li>
+  </ul>
+
+  <p><strong>How to Install:</strong></p>
+  <ul>
+    <li>Open the file after download</li>
+    <li>Click on Install</li>
+    <li>Let the installation complete</li>
+    <li>Restart your PC</li>
+  </ul>
+
+  <!-- GRAPHICS DRIVER -->
+  <h3>3️⃣ Graphics Card Driver – Download & Install</h3>
+  <p><strong>What is it?</strong> Very important for game performance and display.</p>
+
+  <p><strong>Check Your Graphics Card:</strong></p>
+  <ul>
+    <li>Press <strong>Windows + R</strong> on the keyboard</li>
+    <li>Type <code>dxdiag</code> and press Enter</li>
+    <li>Check the graphics card name in the Display tab</li>
+  </ul>
+
+  <p><strong>Download Sources:</strong></p>
+  <ul>
+    <li>NVIDIA:
+      <a href="https://www.nvidia.com/Download/index.aspx" target="_blank">
+        https://www.nvidia.com/Download
+      </a>
+    </li>
+    <li>AMD:
+      <a href="https://www.amd.com/en/support" target="_blank">
+        https://www.amd.com/support
+      </a>
+    </li>
+    <li>Intel:
+      <a href="https://www.intel.com/content/www/us/en/download-center/home.html" target="_blank">
+        https://www.intel.com/download-center
+      </a>
+    </li>
+  </ul>
+
+  <p><strong>How to Install Driver:</strong></p>
+  <ul>
+    <li>Download the driver according to your graphics card</li>
+    <li>Double-click on the downloaded file</li>
+    <li>Next → Next → Install</li>
+    <li>Restart your PC after installation</li>
+  </ul>
+
+  <!-- FINAL -->
+  <h3>4️⃣ Final Step</h3>
+  <ul>
+    <li>After installing Visual C++ + DirectX + Graphics Driver</li>
+    <li>Run the game as <strong>Administrator</strong> and check</li>
+  </ul>
+
+</div>
+
+<div class="content-box">
+    <h2>GTA V Audio Fix – Download & Steps</h2>
+
+    <p><strong>What is it?</strong> A solution for GTA V audio or sound problems such as no sound, distorted sound, or missing sound.</p>
+
+    <h3>Common Audio Problems:</h3>
+    <ul>
+        <li>No sound / Missing sound (music, dialogue, effects)</li>
+        <li>Crackling, popping, distorted sound</li>
+        <li>Wrong audio output device selected</li>
+        <li>Volume / balance issues (left/right channel missing)</li>
+    </ul>
+
+    <h3>Fix Steps:</h3>
+    <ul>
+        <li><strong>Update Audio Drivers:</strong> Windows + R → <code>devmgmt.msc</code> → "Sound, video and game controllers" → right-click → Update driver → Search automatically → Restart PC</li>
+        <li><strong>Check Windows Audio Settings:</strong> Right-click speaker icon → Sounds → Playback tab → select correct device → Set as Default → Advanced → 16bit 44100Hz recommended</li>
+        <li><strong>Check GTA V Audio Settings:</strong> Game → Settings → Audio → Output Device: System Default recommended → Adjust Master / Effects / Voice / Music volumes</li>
+        <li><strong>Verify Game Files:</strong> Steam / Epic / Rockstar Launcher → Verify integrity of game files</li>
+        <li><strong>Disable Conflicting Apps:</strong> Close Discord, VoIP apps, audio enhancers → Restart game</li>
+        <li><strong>Reinstall DirectX & Visual C++:</strong> Ensure DirectX and VC++ runtimes are updated</li>
+        <li><strong>Reinstall GTA V (Last Resort):</strong> Remove mods, backup save files, and do a clean install</li>
+    </ul>
+
+</div>
+</section>
+
+
+<!-- ========== DOWNLOAD SLIDE MODAL WITH GTA4 BACKGROUND ========== -->
+<div id="downloadSlide" style="
+  position:fixed;
+  top:0;
+  left:100%;
+  width:100%;
+  height:100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('assets/img/gta4.webp') center/cover no-repeat;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:0.5s;
+  z-index:9999;
+">
+  <h2 style="margin-bottom:30px;">Download Grand Theft Auto V Parts</h2>
+  <a href="Grand Theft Auto V Part 1.zip" download style="margin:10px; padding:15px 25px; background:#4CAF50; color:white; text-decoration:none; border-radius:5px;">⬇ Grand Theft Auto V Part 1 (21.3 GB)</a>
+  <a href="Grand Theft Auto V Part 2.zip" download style="margin:10px; padding:15px 25px; background:#2196F3; color:white; text-decoration:none; border-radius:5px;">⬇ Grand Theft Auto V Part 2 (27.8 GB)</a>
+  <a href="Grand Theft Auto V Part 3.zip" download style="margin:10px; padding:15px 25px; background:#FF5722; color:white; text-decoration:none; border-radius:5px;">⬇ Grand Theft Auto V Part 3 (25.3 GB)</a>
+  <button onclick="closeSlide()" style="margin-top:40px; padding:10px 20px; background:red; border:none; color:white; font-weight:bold; cursor:pointer; border-radius:5px;">Close</button>
+</div>
+
+<div id="commentSlide">
+  <iframe src="comment.html"></iframe>
+  <button onclick="closeCommentSlide()" style="margin-top:20px; padding:10px 20px; background:red; border:none; color:white; font-weight:bold; cursor:pointer; border-radius:5px;">Close</button>
+</div>
+
+<script>
+function toggleDescription(){
+  const desc = document.getElementById("description");
+  const arrow = document.querySelector(".chevron");
+
+  desc.classList.toggle("active");
+
+  if(desc.classList.contains("active")){
+    arrow.style.transform = "rotate(180deg)";
+    setTimeout(()=>{
+      document.getElementById("aboutGame")
+      .scrollIntoView({behavior:"smooth", block:"start"});
+    },200);
+  }else{
+    arrow.style.transform = "rotate(0deg)";
+  }
+}
+
+// DOWNLOAD SLIDE SCRIPT
+const gtaBtn = document.querySelector('a.gta-btn.download');
+const downloadSlide = document.getElementById('downloadSlide');
+
+gtaBtn.addEventListener('click', function(e){
+  e.preventDefault(); // prevent default download
+  downloadSlide.style.left = '0';
+});
+
+function closeSlide(){
+  downloadSlide.style.left = '100%';
+}
+
+// COMMENT SLIDE SCRIPT
+const commentBtn = document.getElementById('commentBtn');
+const commentSlide = document.getElementById('commentSlide');
+
+commentBtn.addEventListener('click', function(){
+ commentSlide.style.left = '0';
+});
+
+function closeCommentSlide(){
+  commentSlide.style.left = '100%';
+}
+</script>
+
+</body>
+</html>
