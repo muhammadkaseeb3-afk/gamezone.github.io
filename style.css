@@ -1,0 +1,355 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* ================= HERO ================= */
+
+
+/* CENTER BOX */
+.box{
+  background:rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  padding:45px;
+  width:520px;
+  border-radius:14px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.7);
+  text-align:center;
+}
+
+.box h1{
+  font-size:36px;
+  margin-bottom:12px;
+}
+
+.box p{
+  font-size:15px;
+  line-height:1.7;
+  color:#d1d5db;
+  margin-bottom:25px;
+}
+
+/* DOWNLOAD BUTTON */
+.download{
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:15px 32px;
+  font-size:18px;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+
+
+.download:hover{
+  background:#1d4ed8;
+}
+
+.count{
+  margin-top:15px;
+  font-size:14px;
+  color:#cbd5f5;
+}
+
+/* GAME DESCRIPTION BUTTON */
+.game-desc-toggle{
+  position:absolute;
+  bottom:90px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:12px 26px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(0,0,0,0.55);
+  border:1px solid rgba(59,130,246,0.6);
+  color:#60a5fa;
+}
+.game-desc-toggle:hover{
+  background:rgba(0,0,0,0.7);
+}
+
+.chevron{
+  transition:0.3s;
+}
+
+/* ================= DESCRIPTION WRAPPER ================= */
+.description{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.6s ease, padding 0.4s ease;
+  padding:0;
+  background:white;
+}
+
+.description.active{
+  max-height:4000px;
+  padding:80px 20px;
+}
+
+/* ================= HOW TO DOWNLOAD ================= */
+.download-box{
+  max-width:1200px;
+  margin:60px auto 0;
+  background:#f3f4f6;   /* light gray */
+  border-radius:12px;
+  padding:45px 40px;
+}
+
+.download-box h2{
+  font-size:30px;
+  margin-bottom:20px;
+  color:blue;
+}
+
+.download-box ol{
+  padding-left:22px;
+}
+
+.download-box ol li{
+  font-size:17px;
+  color:#111827;
+  margin-bottom:12px;
+  line-height:1.7;
+}
+
+
+/* ================= SYSTEM REQUIREMENTS ================= */
+.sys-box{
+  max-width:1200px;
+  margin:0 auto 60px;
+  background:#f3f4f6;
+  border-radius:12px;
+  padding:40px;
+}
+
+.sys-box h2{
+  color:#2563eb;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.sys-box ul{
+  list-style:none;
+}
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+    url("assets/img/gta1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.sys-box li{
+  font-size:20px;
+  color:#333;
+  padding:10px 0;
+  border-bottom:1px solid black;
+}
+.sys-box li span{
+  font-weight:bold;
+  color:#000;
+}
+
+/* ================= ABOUT GAME (WHITE AREA) ================= */
+.about-game-box{
+  max-width:1200px;
+  margin:0 auto 60px;
+  background:#f3f4f6;
+  border-radius:12px;
+  padding:60px 50px;
+}
+
+.about-game-box h2{
+  color:#facc15;
+  font-size:34px;
+  margin-bottom:25px;
+}
+
+.about-game-box p{
+  color:#333;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:16px;
+}
+.gta-btn{
+    display: inline-block;
+    background: #1e6bff;
+    color: white;
+    padding: 16px 38px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(30,107,255,0.6);
+}
+
+.gta-btn:hover{
+    background:#0d56e6;
+}
+
+
+.screenshots{
+    padding:40px;
+    text-align:center;
+}
+
+h1{
+    color:#1e73ff;
+    margin-bottom:20px;
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    border-bottom:1px solid #ddd;
+    margin-bottom:30px;
+}
+
+.tabs span{
+    padding-bottom:10px;
+    font-weight:bold;
+    color:#888;
+}
+
+.tabs .active{
+    color:#1e73ff;
+    border-bottom:3px solid #1e73ff;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+/* 🔥 CLEAR IMAGE SETTINGS */
+.gallery img{
+    width:220px;
+    height:135px;
+    object-fit:cover;
+    border-radius:6px;
+
+    image-rendering:auto;
+    backface-visibility:hidden;
+    transform:translateZ(0);
+
+    transition:transform 0.3s ease;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+.dots{
+    margin-top:20px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    background:#ccc;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 6px;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:#1e73ff;
+}
+*{
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#ffffff;
+}
+.container{
+  max-width:1200px;
+  margin:50px auto;
+  background:#f5f5f5;
+  padding:40px 50px;
+  border-radius:14px;
+}
+h2{
+  color:#f4b400;
+  font-size:34px;
+}
+h3{
+  margin-top:30px;
+  color:#222;
+}
+p, li{
+  font-size:16px;
+  line-height:1.7;
+  color:#111;
+}
+ul{
+  padding-left:20px;
+}
+a{
+  color:#0066cc;
+  text-decoration:none;
+}
+.note{
+  background:#4fa8ff ;
+  border-left:5px solid #f4b400;
+  padding:20px;
+  margin:30px 0;
+}
+.content-box {
+    background-color:#f5f5f5; /* Gray box */
+    padding: 60px;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* Center horizontally */
+    margin: 50px auto;  
+}
+
+    /*h2 {
+        color: #0056b3;
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 20px;
+    }
+    a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    code {
+        background-color: #d1d1d1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+    }
+
+
+
